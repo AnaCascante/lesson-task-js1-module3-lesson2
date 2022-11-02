@@ -15,7 +15,7 @@ greet ();
 ```*/
 
 function createMessage (class, value){
-    const html = `<div class="class ${class}">${value}</div>`;
+    const html = `<div class="${class}">${value}</div>`;
     return html;
 }
 
@@ -29,6 +29,10 @@ async function getFact() {
     }
     catch(error){
         console.log (error)
+    } 
+    finally {
+        console.log ("It will be ok, at the end!")
     }
 }
 
+getFact ();
